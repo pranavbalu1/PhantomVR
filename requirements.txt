@@ -1,0 +1,6 @@
+# requirements.txt
+streamlit
+plotly
+mediapipe
+opencv-python
+numpy
