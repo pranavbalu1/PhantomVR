@@ -1,24 +1,33 @@
-###Hand and Face Tracking with Gesture Recognition and VR Control
-This repository implements real-time hand and face tracking using OpenCV and MediaPipe, along with gesture recognition for controlling virtual environments and applications such as VR control systems. The project integrates both hand gestures and head pose estimation to interact with virtual devices such as a virtual joystick or VR controllers.
+# Hand and Face Tracking with Gesture Recognition and VR Control
 
-Features
-Hand Tracking:
+This repository implements real-time hand and face tracking using OpenCV and MediaPipe, along with gesture recognition for controlling virtual environments and applications, such as VR control systems. The project integrates both hand gestures and head pose estimation to interact with virtual devices, such as a virtual joystick or VR controllers.
 
-Detects hand gestures using MediaPipe's Hands solution.
-Gesture recognition includes:
-Trigger press (index & middle finger touch thumb)
-Primary action (thumb-index circle / OK gesture)
-Secondary action (thumb-middle finger touch)
-Button A/B (thumb to pinky or ring finger)
-Gesture events are customizable via callback functions.
-Face Tracking:
+## Features
 
-Estimates head pose (pitch, yaw, and roll) from the 3D facial landmarks using MediaPipe's FaceMesh solution.
-Head pose data can be used for controlling virtual environments.
-VR Control Integration:
+### Hand Tracking
+- **Real-time hand tracking** using MediaPipe's `Hands` solution.
+- **Gesture recognition** includes:
+  - **Trigger press**: Index and middle finger touching the thumb.
+  - **Primary action**: Thumb-index circle (OK gesture).
+  - **Secondary action**: Thumb-middle finger touch.
+  - **Button A/B**: Thumb to pinky or ring finger.
+- **Customizable gestures**: Gesture events can be mapped to specific actions using callback functions.
 
-Uses a virtual joystick via the pyvjoy library to send hand orientation data (yaw, pitch, and roll) as joystick axis values.
-Hand gestures are translated into virtual button presses for VR interactions.
-Real-Time Processing:
+### Face Tracking
+- **Head pose estimation**: Determines pitch, yaw, and roll from 3D facial landmarks using MediaPipe's `FaceMesh` solution.
+- **Head pose data**: Can be used for controlling virtual environments, allowing head movements to simulate actions in VR.
 
-Real-time processing of webcam video feed with live feedback of tracked hand gestures and face pose.
+### VR Control Integration
+- **Virtual joystick**: Integrates with the `pyvjoy` library to send hand orientation data (yaw, pitch, and roll) as joystick axis values.
+- **Hand gesture control**: Translates hand gestures into virtual button presses for VR interactions, allowing users to control the virtual environment using natural hand movements.
+
+### Real-Time Processing
+- **Live webcam feed**: Processes the webcam video stream in real-time for dynamic hand gesture tracking and face pose estimation.
+- **Immediate feedback**: Displays tracked hand gestures and head poses live for interaction with the virtual environment.
+
+### Prerequisites
+To run this project, you need to have the following libraries installed:
+- OpenCV
+- MediaPipe
+- pyvjoy (for virtual joystick integration)
+
